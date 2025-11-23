@@ -1,97 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FairSight – AI Governance & Risk Assessment</title>
+  <meta charset="UTF-8">
+  <title>FairSight – AI Governance Assistant</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Inter, sans-serif;
+      background: #f6f7f9;
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f4f6f9;
-        }
+    header {
+      width: 100%;
+      padding: 25px 0;
+      text-align: center;
+      background: white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      margin-bottom: 40px;
+    }
 
-        header {
-            background: #1f70c1;
-            color: white;
-            padding: 30px 20px;
-            text-align: center;
-        }
+    h1 {
+      margin: 0;
+      font-size: 32px;
+      font-weight: 600;
+    }
 
-        h1 {
-            margin: 0;
-            font-size: 2.3rem;
-            font-weight: 700;
-        }
+    .subtitle {
+      font-size: 16px;
+      margin-top: 8px;
+      color: #555;
+    }
 
-        h2 {
-            margin-top: 0;
-        }
+    /* CHAT CONTAINER CENTERED */
+    #chat-wrapper {
+      background: white;
+      width: 90%;
+      max-width: 700px;
+      min-height: 600px;
+      border-radius: 14px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      position: relative;
+    }
 
-        .container {
-            max-width: 900px;
-            margin: 30px auto;
-            background: white;
-            padding: 25px 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-        }
+    /* IBM widget mounts into this div */
+    #root {
+      width: 100%;
+      height: 100%;
+      min-height: 600px;
+      border-radius: 14px;
+      overflow: hidden;
+    }
 
-        .footer {
-            text-align: center;
-            padding: 20px;
-            color: #6a6a6a;
-            font-size: 0.9rem;
-        }
-
-        #root {
-            margin-top: 40px;
-        }
-    </style>
+    footer {
+      margin-top: 20px;
+      color: #666;
+      font-size: 14px;
+      padding-bottom: 40px;
+      text-align: center;
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
-    <h1>FairSight</h1>
-    <p>Your AI Governance, Ethics & Risk Assessment Copilot</p>
+  <h1>FairSight</h1>
+  <div class="subtitle">AI Governance & Risk Assessment Assistant</div>
 </header>
 
-<div class="container">
-    <h2>🔍 Try FairSight</h2>
-    <p>
-        Describe any AI project — for example:
-    </p>
-    <ul>
-        <li>“An AI model that predicts student dropout risk…”</li>
-        <li>“A system that detects heart disease from ECG markers…”</li>
-        <li>“An AI tool for detecting fraud in online transactions…”</li>
-    </ul>
-
-    <p>
-        FairSight will generate:
-    </p>
-
-    <ul>
-        <li>✔ Governance Assessment Report</li>
-        <li>✔ Risk Classification</li>
-        <li>✔ Ethics Checklist</li>
-        <li>✔ Data Protection Evaluation</li>
-        <li>✔ Deployment Readiness Score</li>
-    </ul>
-
-    <p>Scroll down to chat with FairSight:</p>
-
-    <!-- CHAT WILL APPEAR BELOW -->
+<!-- CENTERED CHAT BOX -->
+<div id="chat-wrapper">
     <div id="root"></div>
 </div>
 
-<div class="footer">
-    Built with IBM watsonx Orchestrate • FairSight ©️ 2024
-</div>
 
-<!-- 🔽 Your IBM Embed Code (DO NOT MODIFY) -->
+<!-- ⭐ PASTE YOUR LIVE EMBED SCRIPT HERE ⭐ -->
 <script>
   window.wxOConfiguration = {
     orchestrationID: "78ee657865d24a0d940353340f3537ee_933a96a4-40ee-4a70-b59a-9a5198f42002",
@@ -100,11 +94,10 @@
     deploymentPlatform: "ibmcloud",
     crn: "crn:v1:bluemix:public:watsonx-orchestrate:eu-gb:a/78ee657865d24a0d940353340f3537ee:933a96a4-40ee-4a70-b59a-9a5198f42002::",
     chatOptions: {
-        agentId: "a549939b-5917-4f22-95e1-4845b84ac54a",
+        agentId: "a549939b-5917-4f22-95e1-4845b84ac54a", 
         agentEnvironmentId: "d4910bb3-2188-4147-afb4-cc04ef94b606",
     }
   };
-
   setTimeout(function () {
     const script = document.createElement('script');
     script.src = `${window.wxOConfiguration.hostURL}/wxochat/wxoLoader.js?embed=true`;
@@ -112,8 +105,14 @@
         wxoLoader.init();
     });
     document.head.appendChild(script);
-  }, 0);
+  }, 0);                     
 </script>
+<!-- ⭐ END OF EMBED ⭐ -->
+
+
+<footer>
+  ©️ 2025 FairSight – Built for IBM Hackathon
+</footer>
 
 </body>
 </html>
