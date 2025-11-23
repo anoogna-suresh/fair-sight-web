@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FairSight – AI Governance & Risk Assessment</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+        }
+
+        header {
+            background: #1f70c1;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.3rem;
+            font-weight: 700;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            background: white;
+            padding: 25px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #6a6a6a;
+            font-size: 0.9rem;
+        }
+
+        #root {
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>FairSight</h1>
+    <p>Your AI Governance, Ethics & Risk Assessment Copilot</p>
+</header>
+
+<div class="container">
+    <h2>🔍 Try FairSight</h2>
+    <p>
+        Describe any AI project — for example:
+    </p>
+    <ul>
+        <li>“An AI model that predicts student dropout risk…”</li>
+        <li>“A system that detects heart disease from ECG markers…”</li>
+        <li>“An AI tool for detecting fraud in online transactions…”</li>
+    </ul>
+
+    <p>
+        FairSight will generate:
+    </p>
+
+    <ul>
+        <li>✔ Governance Assessment Report</li>
+        <li>✔ Risk Classification</li>
+        <li>✔ Ethics Checklist</li>
+        <li>✔ Data Protection Evaluation</li>
+        <li>✔ Deployment Readiness Score</li>
+    </ul>
+
+    <p>Scroll down to chat with FairSight:</p>
+
+    <!-- CHAT WILL APPEAR BELOW -->
+    <div id="root"></div>
+</div>
+
+<div class="footer">
+    Built with IBM watsonx Orchestrate • FairSight ©️ 2024
+</div>
+
+<!-- 🔽 Your IBM Embed Code (DO NOT MODIFY) -->
+<script>
+  window.wxOConfiguration = {
+    orchestrationID: "78ee657865d24a0d940353340f3537ee_933a96a4-40ee-4a70-b59a-9a5198f42002",
+    hostURL: "https://eu-gb.watson-orchestrate.cloud.ibm.com",
+    rootElementID: "root",
+    deploymentPlatform: "ibmcloud",
+    crn: "crn:v1:bluemix:public:watsonx-orchestrate:eu-gb:a/78ee657865d24a0d940353340f3537ee:933a96a4-40ee-4a70-b59a-9a5198f42002::",
+    chatOptions: {
+        agentId: "a549939b-5917-4f22-95e1-4845b84ac54a",
+        agentEnvironmentId: "d4910bb3-2188-4147-afb4-cc04ef94b606",
+    }
+  };
+
+  setTimeout(function () {
+    const script = document.createElement('script');
+    script.src = `${window.wxOConfiguration.hostURL}/wxochat/wxoLoader.js?embed=true`;
+    script.addEventListener('load', function () {
+        wxoLoader.init();
+    });
+    document.head.appendChild(script);
+  }, 0);
+</script>
+
+</body>
+</html>
