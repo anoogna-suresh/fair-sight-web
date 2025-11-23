@@ -90,22 +90,31 @@
   window.wxOConfiguration = {
     orchestrationID: "78ee657865d24a0d940353340f3537ee_933a96a4-40ee-4a70-b59a-9a5198f42002",
     hostURL: "https://eu-gb.watson-orchestrate.cloud.ibm.com",
-    rootElementID: "root",
+    rootElementID: "root",              // will be used for fullscreen-overlay
     deploymentPlatform: "ibmcloud",
     crn: "crn:v1:bluemix:public:watsonx-orchestrate:eu-gb:a/78ee657865d24a0d940353340f3537ee:933a96a4-40ee-4a70-b59a-9a5198f42002::",
+
+   
+    showLauncher: false,                // don’t show small launcher button
+    layout: {
+      form: "fullscreen-overlay",      // instead of float → uses rootElementID
+      showOrchestrateHeader: true
+    },
+
     chatOptions: {
-        agentId: "a549939b-5917-4f22-95e1-4845b84ac54a", 
-        agentEnvironmentId: "d4910bb3-2188-4147-afb4-cc04ef94b606",
+      agentId: "a549939b-5917-4f22-95e1-4845b84ac54a",
+      agentEnvironmentId: "d4910bb3-2188-4147-afb4-cc04ef94b606"
     }
   };
+
   setTimeout(function () {
     const script = document.createElement('script');
     script.src = `${window.wxOConfiguration.hostURL}/wxochat/wxoLoader.js?embed=true`;
     script.addEventListener('load', function () {
-        wxoLoader.init();
+      wxoLoader.init();
     });
     document.head.appendChild(script);
-  }, 0);                     
+  }, 0);
 </script>
 <!-- ⭐ END OF EMBED ⭐ -->
 
